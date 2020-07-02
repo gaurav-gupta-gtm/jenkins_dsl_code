@@ -6,7 +6,8 @@ metadata:
     app: httpd
 spec:
   ports:
-    - port: 80
+    - Nodeport: 32033
+      port: 80
       protocol: TCP
       targetPort: 80
   selector:
