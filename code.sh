@@ -4,6 +4,6 @@ echo "service is running"
 else
 kubectl create -f /mycode/http-pod.yaml
 sleep 20
+fi
 POD=$(kubectl get pod -l app=httpd -o jsonpath="{.items[0].metadata.name}")
 kubectl cp /mycode/*.html $POD:/var/www/html/
-fi
